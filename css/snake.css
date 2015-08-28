@@ -1,0 +1,155 @@
+html, body, figure, figcaption, ul, li, h1{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  text-align: inherit;
+}
+
+h1{
+  color: black;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bold;
+  background-color: white;
+}
+
+figure {
+  display: inline-block;
+  border: 10px solid black;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 30px;
+}
+
+.tile{
+  min-width: 25px;
+  min-height: 25px;
+  border: 1px solid white;
+  float: left;
+  background-color: white;
+}
+
+.snake{
+  background: green;
+  min-width: 25px;
+  min-height: 25px;
+  border: 1px solid white;
+  float: left;
+}
+
+.snake-head{
+  background-image: url("sombrero.jpg");
+  background-size: cover;
+  min-width: 25px;
+  min-height: 25px;
+  border: 1px solid white;
+  float: left;
+}
+
+.apple {
+  min-width: 25px;
+  min-height: 25px;
+  border: 1px solid white;
+  float: left;
+  background-image: url("burrito.jpg");
+  background-size: cover;
+}
+
+.row:after {
+  content: ""; /* Empty content string */
+  display: block; /* Only block elements can clear */
+  clear: both;
+}
+
+.snake-leaderboard {
+  height: 68px;
+  width: 320px;
+  color: black;
+  border: 5px solid black;;
+}
+
+.snake-game{
+  margin-left: 2%;
+}
+
+.snake-score{
+  color: black;
+}
+
+.instructions{
+  height: 200px;
+  width: 320px;
+  margin-right: 10%;
+  border: 5px solid black;
+  margin-top: 4%;
+  color: black;
+  text-align: left;
+}
+
+.extras{
+  float:right;
+  width: 43%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h6{
+  color: black;
+  margin-left: -42%;
+  margin-top: 0%;
+}
+
+.logo{
+  margin-left: 19.5%;
+  max-height: 110px;
+  display: block;
+}
+
+.controls{
+  margin-left: 5%;
+}
+
+.controls-title{
+  margin-left: 31%;
+}
+
+.controls{
+  max-height: 138px;
+  margin-left: 29%;
+  margin-top: -6%;
+  display: block;
+}
+
+.game-over-logo{
+  max-height: 42px;
+  display: block;
+}
+
+.m-background {
+  background: rgba(92, 88, 88, 0.6);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.m-content {
+  z-index: 2;
+  position: absolute;
+  top: 23%;
+  left: 37.5%;
+  background-color: white;
+  padding: 1pc;
+  border: 1px solid;
+  border-radius: 5px;
+}

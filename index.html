@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./css/snake.css">
+  </head>
+  <body>
+    <div class="m-content" style="display: none;">
+        <form>
+          <img class="game-over-logo" src="./game-over.png">
+          <h3 class="final-score"></h3>
+
+          <input type="submit" class="btn btn-primary" id="play-again-button" value="Play Again!">
+          <!-- <input type="submit" class="btn btn-primary" id="end-game-button" value="Get Me Out Of Here!" onclick="closeParent()"> -->
+        </form>
+      </div>
+    </div>
+    <img class="logo" src="./logo.png">
+    <figure class="snake-game"></figure>
+    <div class="extras">
+      <div class="snake-leaderboard">
+        <h2 class="snake-score"></h2>
+        <h3 class="snake-score"></h3>
+      </div>
+      <div class="instructions">
+        <h2 class="controls-title">Gameplay</h2>
+        <img class="controls" src="./keyboard.jpg">
+      </div>
+    </div>
+    <h6>SNAKE by Francesco Gallo | 2015 </h6>
+    <script src="./js/jquery-2.1.1.js"></script>
+    <script src="./js/coord.js"></script>
+    <script src="./js/snake.js"></script>
+    <script src="./js/board.js"></script>
+    <script src="./js/snake-view.js"></script>
+    <script>
+    $(function () {
+      new SnakeGame.SnakeView($(".snake-game"));
+    });
+    </script>
+  </body>
+</html>
