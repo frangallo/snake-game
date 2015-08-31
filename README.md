@@ -3,7 +3,7 @@
   built using JavaScript, jQuery, HTMl, CSS and burritos. It's playable in modern web browsers.
 
   [Play Now!][snake-link]
-  [snake-link]: [http://francescogallo.co/snake-game/]
+  [snake-link]: http://francescogallo.co/snake-game/
 
 ## Instructions
 - Move your snake (green line) around the board
