@@ -4,7 +4,8 @@
 
   [Play Now!][snake-link]
   [snake-link]: http://francescogallo.co/snake-game/
-
+  ![logo]
+  [logo]: ./logo.png
 ## Instructions
 - Move your snake (green line) around the board
 - Try to eat the burritos
