@@ -2,6 +2,9 @@
   Frank the Snake is a fairly standard implementation of the classical video game Snake
   built using JavaScript, jQuery, HTMl, CSS and burritos. It's playable in modern web browsers.
 
+  [Play Now!][snake-link]
+  [snake-link]: http://francescogallo.co/snake-game/
+
 ## Instructions
 - Move your snake (green line) around the board
 - Try to eat the burritos
