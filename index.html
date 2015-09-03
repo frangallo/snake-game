@@ -16,7 +16,7 @@
       </div>
     </div>
     <img class="logo" src="./logo.png">
-    <figure class="snake-game"></figure>
+    <figure class="snake-game" display="none";></figure>
     <div class="extras">
       <div class="snake-leaderboard">
         <h2 class="snake-score"></h2>
@@ -25,9 +25,9 @@
       <div class="instructions">
         <h2 class="controls-title">Gameplay</h2>
         <img class="controls" src="./keyboard.jpg">
+        <p id="burrito">Eat the burritos!</p>
       </div>
     </div>
-    <h6>SNAKE by Francesco Gallo | 2015 </h6>
     <script src="./js/jquery-2.1.1.js"></script>
     <script src="./js/coord.js"></script>
     <script src="./js/snake.js"></script>
@@ -35,6 +35,7 @@
     <script src="./js/snake-view.js"></script>
     <script>
     $(function () {
+      $(".snake-game").hide()
       new SnakeGame.SnakeView($(".snake-game"));
     });
     </script>

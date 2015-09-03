@@ -83,7 +83,7 @@ h1 {
 }
 
 .instructions{
-  height: 200px;
+  height: 238px;
   width: 320px;
   margin-right: 10%;
   border: 5px solid black;
@@ -152,4 +152,14 @@ h6{
   padding: 1pc;
   border: 1px solid;
   border-radius: 5px;
+}
+
+#burrito{
+  text-align: center;
+}
+
+.home {
+  position: relative;
+  margin-left: -143%;
+  margin-top: -67%;
 }
