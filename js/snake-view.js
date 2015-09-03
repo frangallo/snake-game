@@ -6,15 +6,37 @@
   var SnakeView = SnakeGame.SnakeView = function ($el) {
     this.board = new SnakeGame.Board(15);
     this.$el = $el;
-    this.bindEvents();
-    this.setupBoard();
-    this.intervalId = window.setInterval(
-      this.step.bind(this),
-      SnakeView.STEP_MILLIS
-    );
+    this.setupHome();
+    // this.bindEvents();
+    // this.setupBoard();
+    // this.intervalId = window.setInterval(
+    //   this.step.bind(this),
+    //   SnakeView.STEP_MILLIS
+    // );
   }
 
   SnakeView.STEP_MILLIS = 75;
+
+  SnakeView.prototype.setupHome = function() {
+    $(".snake-game").hide()
+   var content = $("<h3>").addClass("home").html("Press Space to Start");
+   this.updateScore();
+   $(".instructions").append(content);
+   $(window).one("keydown", this.startGame.bind(this));
+ };
+
+  SnakeView.prototype.startGame = function(event){
+    if (event.keyCode === 32) {
+      $('.home').remove();
+      $(".snake-game").show()
+      this.bindEvents();
+      this.setupBoard();
+      this.intervalId = window.setInterval(
+        this.step.bind(this),
+        SnakeView.STEP_MILLIS
+      );
+    }
+  };
 
   SnakeView.prototype.step = function () {
     if (this.board.snake.segments.length > 0) {
@@ -27,10 +49,15 @@
 
   SnakeView.prototype.gameReset = function (){
     $('body').append("<div>").addClass('m-background')
-    $("h3.final-score").html("Final Score: " + this.board.snake.snakeScore + "<br><h4>Too Much Tequilla!</h4>")
+    $("h3.final-score").html("Final Score: " + this.board.snake.snakeScore + "<br><h4>Better Luck Next Time!</h4>")
     $(".m-content").show();
     $("#play-again-button").click(function(){
-      location.reload();
+      this.bindEvents();
+      this.setupBoard();
+      this.intervalId = window.setInterval(
+        this.step.bind(this),
+        SnakeView.STEP_MILLIS
+      );
     });
   },
 
@@ -86,7 +113,6 @@
     $(".apple").remove();
     $("br").remove();
     this.updateScore();
-
     this.board.createApples(4);
 
     for (var i = 0; i < this.board.size; i++){
